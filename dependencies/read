@@ -1,1 +1,12 @@
+<depend>rclcpp</depend>
+<depend>rclpy</depend>
+<depend>std_msgs</depend>
+<depend>geometry_msgs</depend>
+<depend>python3-numpy</depend>
+<depend>tf2_ros_py</depend>
+<depend>turtlesim</depend>
+<depend>rviz2</depend>
+<depend>joint_state_publisher</depend>
+<depend>robot_state_publisher</depend>
 
+***add accordingly in your program******
