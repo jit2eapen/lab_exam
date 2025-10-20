@@ -1,0 +1,27 @@
+data_files=[
+    ('share/' + package_name, ['package.xml']),
+    ('share/' + package_name + '/launch', ['launch/second.launch.py']),
+    ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
+],
+
+
+
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package='second',
+            executable='talker',
+            name='publisher',
+            output='screen'
+        ),
+        Node(
+            package='second',
+            executable='listener',
+            name='subscriber',
+            output='screen'
+        )
+    ])
+
