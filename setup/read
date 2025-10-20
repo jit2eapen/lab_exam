@@ -5,8 +5,19 @@
     	('share/ament_index/resource_index/packages', ['resource/' + package_name]),
     ],
 
-   
-   
+****for launch file*****
+
+
+     data_files=[
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name + '/launch', ['launch/display.launch.py']),
+        ('share/' + package_name + '/urdf', ['urdf/my_robot.urdf']),
+    ],
+
+*****for launch + urdf *****
+
 entry_points={
 	    'console_scripts': [
 		'broad = fourth.broadcastor:main',
@@ -14,3 +25,5 @@ entry_points={
 		'mover = fourth.mov:main',
         ],
     },
+
+***entrypoints edit accordingly*****
