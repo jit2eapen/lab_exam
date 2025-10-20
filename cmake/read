@@ -4,6 +4,9 @@ find_package(std_msgs REQUIRED)
 
 add_executable(talker src/pub.cpp)
 ament_target_dependencies(talker rclcpp std_msgs)
+add_executable(server src/server.cpp)
+ament_target_dependencies(server rclcpp example_interfaces)
+
 
 
 install(TARGETS
