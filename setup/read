@@ -1,1 +1,16 @@
 
+   data_files=[
+    	('share/' + package_name, ['package.xml']),
+    	('share/' + package_name + '/launch', ['launch/first.launch.py']),
+    	('share/ament_index/resource_index/packages', ['resource/' + package_name]),
+    ],
+
+   
+   
+entry_points={
+	    'console_scripts': [
+		'broad = fourth.broadcastor:main',
+		'list = fourth.listener:main',
+		'mover = fourth.mov:main',
+        ],
+    },
